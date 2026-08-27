@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAs usadas — Sobre el Cerro Kallami</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">Cerro <span>Kallami</span></a>
+    <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <nav class="mainnav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="relato.html">El relato</a></li>
+        <li><a href="adaptacion.html">Adaptación</a></li>
+        <li><a href="video.html">Video y guion</a></li>
+        <li><a href="sistemas.html">Ing. de Sistemas</a></li>
+        <li><a href="ias.html">IAs usadas</a></li>
+        <li><a href="conclusiones.html">Conclusiones</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="telar"></div>
+
+<main>
+  <section class="section">
+    <span class="eyebrow">Transparencia metodológica</span>
+    <h1>Inteligencias artificiales utilizadas</h1>
+    <p style="color:var(--paper-dim); max-width:700px;">
+      Este proyecto combinó dos herramientas de inteligencia artificial en etapas distintas:
+      una para el desarrollo textual y de planificación, y otra para la generación de los
+      clips de video.
+    </p>
+  </section>
+
+  <section class="section tight">
+    <div class="ia-grid">
+      <div class="ia-card">
+        <span class="rol">Texto · guion · análisis</span>
+        <h3>Claude (Anthropic)</h3>
+        <p style="margin:0; color:var(--paper-dim); font-size:.92rem;">
+          Se usó para redactar el guion breve, estructurar el storyboard sobre el Camino del
+          Héroe, desarrollar el análisis desde la mención de Ingeniería de Sistemas (actores,
+          diagrama, entrada-proceso-salida, problema y propuesta de mejora), y para diseñar los
+          prompts de generación de video adaptados a las restricciones de cada herramienta.
+        </p>
+      </div>
+      <div class="ia-card">
+        <span class="rol">Generación de video</span>
+        <h3>Google Flow (Veo 3.1 Lite)</h3>
+        <p style="margin:0; color:var(--paper-dim); font-size:.92rem;">
+          Se usó para generar los 12 clips de video de 5 segundos que componen el storyboard,
+          a partir de los prompts en inglés listados más abajo. Se seleccionó el modelo
+          <strong>Veo 3.1 Lite</strong> en el selector de modelo del cuadro de instrucción de
+          Flow, por ser un modo más rápido y económico en puntos, adecuado para clips cortos.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <p style="margin:0; font-size:.9rem;">
+        <strong style="color:var(--thread-gold);">Nota sobre el modo Lite:</strong> no se activa
+        escribiéndolo dentro del prompt, sino eligiéndolo en el selector de modelo (⚙) del
+        cuadro de instrucción de Flow, junto a las opciones "Veo 3.1 Quality" y "Veo 3.1 Fast".
+        Cada uno de los 13 prompts se generó en un chat independiente para maximizar los
+        créditos gratuitos disponibles, por lo que cada prompt incluye su propio contexto
+        narrativo, sin depender de las escenas anteriores.
+      </p>
+    </div>
+    <div class="card" style="margin-top:1rem;">
+      <p style="margin:0; font-size:.9rem;">
+        <strong style="color:var(--thread-gold);">Nota sobre la duración:</strong> el modelo
+        entrega clips de <strong>8 segundos</strong> en vez de 5, incluso con Lite activado.
+        Por eso todos los prompts se actualizaron para pedir "8 seconds" en lugar de "5
+        seconds" — el resto de la descripción de cada escena no cambió.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">Prompts</span>
+    <h2>Prompts usados en Google Flow (13 escenas × 8 s)</h2>
+
+    <details class="prompt">
+      <summary>Escena 1 — Mundo ordinario (0:00–0:08)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend about Cerro Kallami, a massive sacred rocky mountain in the altiplano near Pucarani and Cota Cota, La Paz, Bolivia, believed to hold hidden silver and to act as a living guardian spirit that protects its own people. Wide static establishing shot: sunrise over Cerro Kallami, golden light spreading across the open Andean plains, no people visible yet, slow gentle camera drift. Cinematic realism, warm earthy color palette, natural light, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 2 — Llamado a la aventura (0:08–0:16)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: a foreign gold prospector from the early 20th century (light skin, short beard, worn expedition jacket, hat and boots) has traveled to Cerro Kallami, a massive sacred rocky Andean mountain, because he wants to trick the mountain into giving him its hidden silver mine. Medium shot: the foreign prospector walking steadily across open Andean plains toward the rocky mountain in the background, natural daylight, steady tracking camera. Cinematic realism, warm earthy color palette, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 3 — Duda / la oferta (0:16–0:24)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: a foreign gold prospector has just offered to "pay" Cerro Kallami, a sacred living mountain, using a local Aymara man as if he were an object of trade, without asking the man's consent. Close-up shot on the face of an indigenous Aymara man, around 30 years old, brown skin, black hair, wearing a traditional Andean poncho and chullo hat, his expression shifting from calm to confusion and concern as he realizes what is happening. Soft natural light, shallow depth of field, minimal camera movement. Cinematic realism, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 4 — Cruce del umbral (0:24–0:32)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: Cerro Kallami, a massive sacred rocky mountain that is actually a living guardian spirit, magically opens itself to reveal a hidden stone doorway inside, so that the foreign gold prospector and the Aymara man he brought can enter. Wide shot: the huge rocky mountain slowly cracking open, revealing a glowing stone doorway, dust and light rays drifting from the opening, slow motion, mystical but grounded realism. Cinematic realism, warm earthy tones, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 5 — Entrada al fondo del cerro (0:32–0:40)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: a foreign gold prospector (light skin, short beard, worn expedition jacket, hat) and an indigenous Aymara man (brown skin, black hair, traditional poncho and chullo hat) walk together into the glowing interior of Cerro Kallami, a sacred mountain that is really a living guardian spirit, heading toward its hidden underground chamber full of silver. Medium shot: the two men, seen from behind, walking into a warmly torch-lit cavern interior, flickering light on ancient stone walls, slow forward camera movement. Cinematic realism, warm earthy tones, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 6 — El gringo exige la mina (0:40–0:48)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: inside the sacred mountain Cerro Kallami, the foreign gold prospector arrogantly demands that the mountain spirit hand over its silver mine, claiming he has already "paid" by bringing the Aymara man as an offering. Medium shot: the foreign prospector (light skin, short beard, worn expedition jacket) standing inside a warmly lit cave chamber, gesturing insistently and demandingly toward the depths of the glowing cave interior. Warm low light, subtle camera push-in. Cinematic realism, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 7 — El cerro se niega (0:48–0:56)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: Cerro Kallami, a sacred rocky mountain that is a living ancient guardian spirit, firmly refuses to give its silver mine to the foreign gold prospector, because it has just recognized that the Aymara man brought to it is actually its own grandson, not something that can be traded away. Close-up shot: ancient textured rock surface glowing faintly from within, as if alive, dust particles floating in low-key dramatic light, minimal camera movement, conveying a firm, refusing presence. Cinematic realism, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 8 — Los cántaros de plata (0:56–1:04)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: inside the sacred mountain Cerro Kallami, there is a hidden chamber full of ancient clay pitchers overflowing with silver, which the mountain spirit keeps for its own Aymara descendants, not for foreign outsiders. Close-up detail shot: rows of ancient clay pitchers filled with silver coins, warm torchlight reflecting off the metal inside a stone cave, slow reveal camera movement. Cinematic realism, warm earthy tones, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 9 — Entrega de la plata al aymara (1:04–1:12)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: Cerro Kallami, the sacred mountain spirit, rewards the Aymara man by giving him silver from one of its ancient clay pitchers, because it has recognized him as its own grandson, while the foreign prospector who tried to trick the mountain receives nothing. Extreme close-up shot: the hands of an indigenous Aymara man (traditional poncho sleeve visible at the frame edge) receiving silver coins poured from an ancient clay pitcher, warm firelight, shallow depth of field. Cinematic realism, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 10 — Advertencia al gringo (1:12–1:20)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: after refusing to give up its mine and rewarding the Aymara man instead, Cerro Kallami, the sacred mountain spirit, warns the foreign gold prospector that if he tries to enter the mountain again by himself, seeking the silver alone, something will happen to him. Medium shot: the foreign prospector (light skin, short beard, worn expedition jacket) standing alone inside a torch-lit cave, taking a cautious step backward, warm dim lighting, slow camera pull-back, conveying tension and warning. Cinematic realism, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 11 — El gringo vuelve a entrar (1:20–1:28)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: ignoring the mountain's warning, the greedy foreign gold prospector decides to go back alone to Cerro Kallami at dusk, thinking nothing bad will happen to him, planning to take the silver mine for himself. Wide shot: the lone foreign prospector (light skin, short beard, worn expedition jacket, hat) walking steadily back toward the rocky mountain entrance under an orange dusk sky, slow steady camera. Cinematic realism, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 12 — El cerro se cierra / final (1:28–1:36)</summary>
+      <div class="prompt-text">This is a scene from an Andean Bolivian legend: as soon as the greedy foreign gold prospector re-enters Cerro Kallami alone without permission, the sacred mountain suddenly seals itself shut, trapping and swallowing him forever, as punishment for trying to exploit it — while the Aymara man, its true grandson, is safely far away with the silver he was rightfully given. Wide shot: the large rocky mountain suddenly sealing shut with a burst of dust and falling rock, then complete stillness, slowly fading to black. Cinematic slow motion, dramatic but subtle, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <details class="prompt">
+      <summary>Escena 13 — Créditos finales (1:36–1:44) · nueva</summary>
+      <div class="prompt-text">This is the closing shot of a short film based on an Andean Bolivian legend about Cerro Kallami, a sacred rocky mountain in the altiplano near Pucarani and Cota Cota, La Paz, Bolivia. Wide static shot: a calm, empty view of the Andean altiplano landscape at dusk, Cerro Kallami visible in the distance, soft fading warm light, no people, no animals, minimalist and quiet composition with open sky and open ground, leaving clear negative space for text to be added later in post-production. Absolutely no on-screen text, no logos, no watermarks generated by the model. Camera completely static, no movement. Cinematic realism, warm earthy tones, folk legend atmosphere, 16:9, 8 seconds, no dialogue.</div>
+    </details>
+
+    <div class="card" style="margin-top:1rem;">
+      <p style="margin:0; font-size:.9rem;">
+        <strong style="color:var(--thread-gold);">Por qué la escena 13 no lleva texto generado por la IA:</strong>
+        los modelos de video suelen renderizar el texto en pantalla de forma borrosa o
+        deformada. Por eso este prompt pide explícitamente "no on-screen text": se genera solo
+        el paisaje tranquilo, y los créditos reales (nombre del estudiante, mención, narrador
+        original, IAs usadas) se añaden como texto editado en DaVinci Resolve sobre ese clip,
+        para que queden nítidos y legibles.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <p>Sobre el Cerro Kallami — Adaptación audiovisual · Ingeniería de Sistemas</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

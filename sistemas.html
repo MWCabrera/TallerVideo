@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingeniería de Sistemas — Sobre el Cerro Kallami</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">Cerro <span>Kallami</span></a>
+    <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <nav class="mainnav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="relato.html">El relato</a></li>
+        <li><a href="adaptacion.html">Adaptación</a></li>
+        <li><a href="video.html">Video y guion</a></li>
+        <li><a href="sistemas.html">Ing. de Sistemas</a></li>
+        <li><a href="ias.html">IAs usadas</a></li>
+        <li><a href="conclusiones.html">Conclusiones</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="telar"></div>
+
+<main>
+  <section class="section">
+    <span class="eyebrow">Mención</span>
+    <h1>Ingeniería de Sistemas</h1>
+    <p style="color:var(--paper-dim); max-width:700px;">
+      Pregunta guía: ¿cómo funciona el problema completo y qué actores, procesos, información
+      y recursos intervienen en el relato "Sobre el Cerro Kallami"?
+    </p>
+  </section>
+
+  <section class="section tight">
+    <span class="eyebrow">Método</span>
+    <h2>Cómo se abordó</h2>
+    <div class="card">
+      <ol style="margin:0; padding-left:1.2rem; color:var(--paper-dim);">
+        <li>Representar el relato respetando su contexto original.</li>
+        <li>Identificar quiénes participan y qué función cumple cada actor.</li>
+        <li>Identificar la información de entrada.</li>
+        <li>Ordenar las actividades principales del proceso.</li>
+        <li>Identificar el resultado o salida.</li>
+        <li>Detectar dónde existe una dificultad o problema.</li>
+        <li>Proponer cómo podría mejorarse el sistema completo en un escenario actual.</li>
+      </ol>
+      <p style="margin:1.2rem 0 0;"><strong style="color:var(--thread-gold); font-family:'IBM Plex Mono',monospace; font-size:.8rem; text-transform:uppercase; letter-spacing:.06em;">Secuencia sugerida —</strong><br>
+      Necesidad → Actores → Intercambio de información → Decisión → Acción → Resultado.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">Actores</span>
+    <h2>Lista de actores y función</h2>
+    <table>
+      <thead><tr><th>Actor</th><th>Función en el relato</th></tr></thead>
+      <tbody>
+        <tr><td>El Cerro Kallami</td><td>Autoridad y dueño legítimo del recurso (la mina/plata). Verifica identidad, decide a quién entregar el recurso y protege a su comunidad.</td></tr>
+        <tr><td>El gringo</td><td>Actor externo que busca extraer el recurso ofreciendo a otra persona como forma de pago, sin su consentimiento.</td></tr>
+        <tr><td>El hombre aymara</td><td>Es usado inicialmente como "moneda de cambio", pero resulta ser el verdadero beneficiario legítimo del sistema (nieto del cerro).</td></tr>
+        <tr><td>Mariano Quispe (narrador)</td><td>Transmisor del conocimiento oral; preserva y valida el relato para la comunidad.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">Modelo del proceso</span>
+    <h2>Diagrama sencillo</h2>
+    <div class="diagrama-simple">        ┌────────────┐
+        │   GRINGO   │
+        └─────┬──────┘
+              │ ofrece "pagar" con
+              │ el hombre aymara
+              ▼
+        ┌────────────┐        verifica identidad
+        │   CERRO    │ ───────────────────────────┐
+        │  KALLAMI   │                             ▼
+        └─────┬──────┘                     "es mi nieto"
+              │ niega la mina al gringo
+              │ entrega plata al aymara
+              ▼
+        ┌────────────┐
+        │   HOMBRE   │  ← recibe plata (recompensa legítima)
+        │   AYMARA   │
+        └────────────┘
+
+  GRINGO intenta reingresar solo → CERRO se cierra → GRINGO desaparece</div>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">Flujo</span>
+    <h2>Entrada → Proceso → Salida</h2>
+    <div class="eps">
+      <div class="box"><h4>Entrada</h4>Oferta del gringo: "pagar con el hombre aymara" a cambio de la mina.</div>
+      <div class="arrow">→</div>
+      <div class="box"><h4>Proceso</h4>El cerro se abre, verifica identidad del hombre (reconoce a su nieto) y evalúa la petición del gringo.</div>
+      <div class="arrow">→</div>
+      <div class="box"><h4>Salida</h4>Negativa al gringo: "no te puedo dar nada". Entrega de plata al aymara.</div>
+    </div>
+    <div class="eps">
+      <div class="box"><h4>Entrada</h4>Intento del gringo de reingresar solo, sin autorización.</div>
+      <div class="arrow">→</div>
+      <div class="box"><h4>Proceso</h4>El cerro detecta el segundo intento no autorizado y se cierra.</div>
+      <div class="arrow">→</div>
+      <div class="box"><h4>Salida</h4>Desaparición del gringo; el sistema queda protegido.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">Diagnóstico</span>
+    <h2>Problema identificado y propuesta de mejora</h2>
+    <div class="card" style="margin-bottom:1.2rem;">
+      <h3 style="color:var(--thread-gold); font-style:normal; font-family:'IBM Plex Mono',monospace; font-size:.85rem; text-transform:uppercase; letter-spacing:.06em;">Problema</h3>
+      <p style="margin:0;">
+        El gringo intenta un intercambio sin consentimiento real: utiliza a otra persona como
+        "medio de pago" y busca acceder al recurso (la mina) sin reciprocidad ni transparencia.
+        No existe ningún mecanismo previo de verificación, registro o consentimiento antes de
+        que el recurso humano sea comprometido — una falla de origen en el sistema del relato:
+        la ausencia de un protocolo de validación.
+      </p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--thread-gold); font-style:normal; font-family:'IBM Plex Mono',monospace; font-size:.85rem; text-transform:uppercase; letter-spacing:.06em;">Propuesta de mejora</h3>
+      <ul style="margin:0; padding-left:1.2rem;">
+        <li>Protocolo de <strong>consentimiento explícito</strong>: nadie puede ser ofrecido como "medio de pago" sin su propia autorización.</li>
+        <li><strong>Trazabilidad</strong>: registro de acuerdos entre actores externos y la comunidad/recurso, evitando accesos repetidos no autorizados.</li>
+        <li><strong>Verificación de identidad y legitimidad</strong> antes de autorizar cualquier entrega de recursos.</li>
+        <li><strong>Alerta o bloqueo automático</strong> ante intentos de acceso repetidos sin autorización.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <p>Sobre el Cerro Kallami — Adaptación audiovisual · Ingeniería de Sistemas</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
