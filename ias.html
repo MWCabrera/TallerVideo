@@ -54,10 +54,42 @@
         <span class="rol">Generación de video</span>
         <h3>Google Flow (Veo 3.1 Lite)</h3>
         <p style="margin:0; color:var(--paper-dim); font-size:.92rem;">
-          Se usó para generar los 12 clips de video de 5 segundos que componen el storyboard,
-          a partir de los prompts en inglés listados más abajo. Se seleccionó el modelo
-          <strong>Veo 3.1 Lite</strong> en el selector de modelo del cuadro de instrucción de
-          Flow, por ser un modo más rápido y económico en puntos, adecuado para clips cortos.
+          Se usó para generar los 13 clips de video (8 segundos cada uno) que componen el
+          storyboard, a partir de los prompts en inglés listados más abajo. Se seleccionó el
+          modelo <strong>Veo 3.1 Lite</strong> en el selector de modelo del cuadro de
+          instrucción de Flow, por ser un modo más rápido y económico en puntos, adecuado
+          para clips cortos.
+        </p>
+      </div>
+      <div class="ia-card">
+        <span class="rol">Voz del narrador</span>
+        <h3>Musely</h3>
+        <p style="margin:0; color:var(--paper-dim); font-size:.92rem;">
+          Se usó para generar la narración en off del video (voz en español, tono cálido y
+          pausado tipo relato oral). Se eligió por ser una herramienta de texto a voz
+          accesible sin necesidad de tarjeta de crédito ni registro, adecuada para un
+          proyecto académico de bajo presupuesto. Cada línea del guion se generó por
+          separado y luego se alineó manualmente en la edición, escena por escena.
+        </p>
+      </div>
+      <div class="ia-card">
+        <span class="rol">Música de fondo</span>
+        <h3>Suno</h3>
+        <p style="margin:0; color:var(--paper-dim); font-size:.92rem;">
+          Se usó para generar la música instrumental de fondo del video, con un prompt
+          orientado a un ambiente andino, místico y cinematográfico, sin voz, para no
+          interferir con la narración. Se aprovechó su modo instrumental y sus créditos
+          gratuitos diarios para producir la pista sin costo.
+        </p>
+      </div>
+      <div class="ia-card">
+        <span class="rol">Edición y unión final</span>
+        <h3>Movavi Video Suite</h3>
+        <p style="margin:0; color:var(--paper-dim); font-size:.92rem;">
+          Se usó para unir los 13 clips generados en Google Flow en un solo video, alinear
+          la narración de Musely y la música de fondo de Suno en sus pistas de audio
+          correspondientes, agregar los subtítulos y superponer el texto de créditos sobre
+          la escena final.
         </p>
       </div>
     </div>
@@ -157,8 +189,8 @@
         los modelos de video suelen renderizar el texto en pantalla de forma borrosa o
         deformada. Por eso este prompt pide explícitamente "no on-screen text": se genera solo
         el paisaje tranquilo, y los créditos reales (nombre del estudiante, mención, narrador
-        original, IAs usadas) se añaden como texto editado en DaVinci Resolve sobre ese clip,
-        para que queden nítidos y legibles.
+        original, IAs usadas) se añaden como texto editado en Movavi Video Suite sobre ese
+        clip, para que queden nítidos y legibles.
       </p>
     </div>
   </section>
