@@ -7,16 +7,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root{
-  --rock:        #241a12;
-  --rock-2:      #362519;
-  --rock-3:      #4a3324;
-  --paper:       #efe6d3;
-  --paper-dim:   #e2d6ba;
-  --ink:         #241a12;
-  --thread-red:  #a63d2f;
-  --thread-gold: #c89b3c;
-  --thread-blue: #3a5a78;
-  --thread-green:#5c6e49;
+  /* Paleta "Noche de Plata": el cerro bajo cielo nocturno andino,
+     con acentos de plata, cobre, turquesa y magenta de aguayo. */
+  --rock:        #1b2130;
+  --rock-2:      #262e40;
+  --rock-3:      #3a465c;
+  --paper:       #f3ede0;
+  --paper-dim:   #ddd0b3;
+  --ink:         #1b2130;
+  --thread-red:  #b1466c;
+  --thread-gold: #d98a4e;
+  --thread-blue: #4fa6a6;
+  --thread-green:#7c8f5a;
 
   --radius: 2px;
   --max-w: 980px;
